@@ -6,5 +6,6 @@ var A = (function () {
     return A;
 })();
 var a = new A();
-//alert (a.X);
+//var a: A = new A();
+alert(a.X);
 alert(a.Y);
