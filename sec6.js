@@ -1,10 +1,9 @@
-// 引数の値で constructor で初期化するけど、引数がない場合も考慮する場合
+// 引数にアクセシビリティ（public とか）を付けると、引数をそのままメンバにすることができる
 var A = (function () {
-    function A(m) {
-        if (m == undefined)
+    function A(message) {
+        this.message = message;
+        if (message == undefined)
             this.message = 'no value';
-        else
-            this.message = m;
     }
     return A;
 })();

@@ -1,12 +1,8 @@
-// 引数の値で constructor で初期化するけど、引数がない場合も考慮する場合
+// 引数にアクセシビリティ（public とか）を付けると、引数をそのままメンバにすることができる
 
 class A {
-    public message: string;
-    constructor(m?: string) {
-        if (m == undefined)
-            this.message = 'no value';
-        else
-            this.message = m;
+    constructor(public message: string) {
+        if (message == undefined) this.message = 'no value';
     }
 }
 
