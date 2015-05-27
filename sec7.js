@@ -1,10 +1,15 @@
 var Piyo = (function () {
-    function Piyo(name, age) {
+    // b
+    // constructor(n: string, a: number) {
+    //     this.name = n;
+    //     this.age = a;
+    // }
+    // 以下だと a, b の箇所不要。
+    // 但し、アクセシビリティ付き引数で受け取る値は、interface で定義されていなくてもエラーにならない。
+    function Piyo(name, ages) {
         this.name = name;
-        this.age = age;
+        this.ages = ages;
     }
-    //    public name: string;
-    //    public age: number;
     Piyo.prototype.getName = function () {
         return this.name;
     };
